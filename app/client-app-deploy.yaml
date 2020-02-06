@@ -15,9 +15,6 @@ spec:
       containers:
       - image: ameenalam/react-todoapp-client:latest
         name: react-todoapp-client
-        #env:
-        #- name: API_URL 
-        #  value: http://192.168.99.100:32117
         envFrom:
         - configMapRef:
             name: client-config
