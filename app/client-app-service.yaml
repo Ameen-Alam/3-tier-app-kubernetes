@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-todoapp-client-service
+spec:
+  selector:
+    app: react-todoapp-client
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 31002
+  clusterIP: 10.96.0.105
+  type: LoadBalancer

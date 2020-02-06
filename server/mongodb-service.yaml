@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: mongodb-pod
+  name: mongo-service
+spec:
+  ports:
+  - port: 27017
+    targetPort: 27017
+  clusterIP: 10.96.202.115
+  selector:
+    app: mongodb-pod

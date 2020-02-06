@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-todoapp-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-todoapp-server
+  template:
+    metadata:
+      labels:
+        app: node-todoapp-server
+    spec:
+      containers:
+      - image: ameenalam/node-todoapp-server:latest
+        name: container1
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: IfNotPresent
+        envFrom:
+        - configMapRef:
+            name: server-config
+        - secretRef:
+            name: server-secret
