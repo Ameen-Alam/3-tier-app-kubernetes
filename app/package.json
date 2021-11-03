@@ -12,7 +12,7 @@
     "react-dom": "^16.12.0",
     "react-loader-spinner": "^3.1.5",
     "react-scripts": "3.3.1",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "dev": "chmod +x ./env.sh && ./env.sh && cp env-config.js ./public/ && react-scripts start",
